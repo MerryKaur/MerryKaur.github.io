@@ -69,6 +69,23 @@ body  {
 
 #title2 { font-size: 12px; }
 
+
+.shrine_text {
+  height: 80%; /* Full-height: remove this if you want "auto" height */
+  width: 1015px; /* Set the width of the sidebar */
+  position: absolute; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 3; /* Stay on top */
+  top: 10; /* Stay at the top */
+  left: 380px;
+  text-align: center;
+  
+  overflow-y: hidden; /* Hide vertical scroll */
+  overflow-x: hidden; /* Hide horizontal scroll */
+  padding-top: 25px;
+  padding-left: 10;
+  padding-right: 10;
+}
+
 * {box-sizing:border-box}
 
 /* Slideshow container */
