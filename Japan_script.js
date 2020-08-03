@@ -59,7 +59,7 @@ tokyoTime('+9');
 function tokyoWeather() {
 
   // use fetch to get the weather data from Tokyo
-  fetch("http://api.openweathermap.org/data/2.5/weather?q=Tokyo,jp&units=imperial&appid=153a1ec8f6b54ec52d519c21641a079f")
+  fetch("https://api.openweathermap.org/data/2.5/weather?q=Tokyo,jp&units=imperial&appid=153a1ec8f6b54ec52d519c21641a079f")
  
   .then(function(resp) { return resp.json() }) // Convert data to json
   .then(function(data) {
@@ -75,7 +75,7 @@ function displayWeather( d ) {
   
   var icon = d.weather[0].icon
   var img = document.createElement('img'); 
-  img.src = 'http://openweathermap.org/img/wn/' + icon + '.png'; 
+  img.src = 'https://openweathermap.org/img/wn/' + icon + '.png'; 
   //document.getElementById('icon').innerHTML = img;
 
   document.getElementById('description').innerHTML = d.weather[0].description;
