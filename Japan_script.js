@@ -95,10 +95,10 @@ function displayWeather( d ) {
 
 }
 
-// call function to display the weather
-//window.onload = function() {
-  //tokyoWeather();
-//}
+//call function to display the weather
+window.onload = function() {
+  tokyoWeather();
+}
 
 
 
@@ -161,6 +161,5 @@ function displayRecipe( d ) {
 
 // call function to display the recipe
 window.onload = function() {
-  tokyoWeather();
   japanFood();
 }
