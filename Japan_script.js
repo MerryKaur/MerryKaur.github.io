@@ -29,6 +29,7 @@ function showSlides() {
 } 
 
 
+
 // function to calculate time in Tokyo
 function tokyoTime(offset) {
 
@@ -59,7 +60,7 @@ tokyoTime('+9');
 function tokyoWeather() {
 
   // use fetch to get the weather data from Tokyo
-  fetch("https://api.openweathermap.org/data/2.5/weather?q=Tokyo,jp&units=imperial&appid=153a1ec8f6b54ec52d519c21641a079f")
+  fetch("http://api.openweathermap.org/data/2.5/weather?q=Tokyo,jp&units=imperial&appid=153a1ec8f6b54ec52d519c21641a079f")
  
   .then(function(resp) { return resp.json() }) // Convert data to json
   .then(function(data) {
@@ -75,7 +76,7 @@ function displayWeather( d ) {
   
   var icon = d.weather[0].icon
   var img = document.createElement('img'); 
-  img.src = 'https://openweathermap.org/img/wn/' + icon + '.png'; 
+  img.src = 'http://openweathermap.org/img/wn/' + icon + '.png'; 
   //document.getElementById('icon').innerHTML = img;
 
   document.getElementById('description').innerHTML = d.weather[0].description;
@@ -95,9 +96,9 @@ function displayWeather( d ) {
 }
 
 // call function to display the weather
-window.onload = function() {
-  tokyoWeather();
-}
+//window.onload = function() {
+  //tokyoWeather();
+//}
 
 
 
@@ -123,3 +124,43 @@ function openWindow(image){
     '<INPUT TYPE="button" VALUE="OK"onClick="window.close();"></FORM></BODY>   </HTML>');
   }
 
+
+
+//function to get a random recipe and put it on the food page
+function japanFood() {
+
+  // use fetch to get the food data from spoonacular API
+  fetch("https://api.spoonacular.com/recipes/search?apiKey=2f778d01da754c02b11c3881172351b3&number=1&cuisine=Japanese")
+ 
+  .then(function(resp) { return resp.json() }) // Convert data to json
+  .then(function(data) {
+    displayRecipe(data);
+    console.log(data)
+  })
+  //catch errors
+  .catch(function() {
+  
+  });
+}
+
+
+function displayRecipe( d ) {
+  
+  var name = d.results[0].title
+  var baseUrl = d.baseUri
+  var endUrl = d.results[0].image
+  
+  //document.getElementById('icon').innerHTML = img;
+
+  //document.getElementById('sourceLink').innerHTML = ;
+  //document.getElementById('sourceLink').href = ;
+  
+  document.getElementById('output1').innerHTML = "<img src=' " + baseUrl+endUrl +" ' /><br> ready in "+d.results[0].readyInMinutes+" minutes";
+
+}
+
+// call function to display the recipe
+window.onload = function() {
+  tokyoWeather();
+  japanFood();
+}
