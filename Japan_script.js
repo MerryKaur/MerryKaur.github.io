@@ -95,10 +95,8 @@ function displayWeather( d ) {
 
 }
 
-//call function to display the weather
-window.onload = function() {
-  tokyoWeather();
-}
+tokyoWeather();
+
 
 
 
@@ -119,7 +117,7 @@ function openWindow(image){
   msgWindow = window.open('','popup','width=' + popW + ',height=' + popH + 
                            ',top=' + topPos + ',left=' + leftPos + ',       scrollbars=yes');
                            msgWindow.document.write ('<HTML><HEAD><TITLE>Centered Window</TITLE></HEAD><BODY><FORM    NAME="form1">' +
-    '<img src=" ' + image + '" width="1500" height="1000">'+ '<br>' +
+    '<img src=" ' + image + '" style="width:800px;height:auto;">'+ '<br>' +
     'Click the button below to close the window.<br />' +
     '<INPUT TYPE="button" VALUE="OK"onClick="window.close();"></FORM></BODY>   </HTML>');
   }
