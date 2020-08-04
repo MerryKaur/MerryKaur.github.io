@@ -105,7 +105,7 @@ body  {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: 80%;
+  width: auto;
   margin-top: -22px;
   padding: 16px;
   color: white;
@@ -119,6 +119,11 @@ body  {
 /* Position the "next button" to the right */
 .next {
   right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
   border-radius: 3px 0 0 3px;
 }
 
