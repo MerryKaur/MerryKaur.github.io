@@ -16,6 +16,7 @@ function tokyoTime(offset) {
   // return time as a string
   //return "The local time in Tokyo is " + nd.toLocaleString();
   document.getElementById("time").innerHTML = nd.toLocaleString();
+  console.log(nd);
 
 }
 
@@ -63,7 +64,7 @@ function displayWeather( d ) {
 
 }
 
- call function to display the weather
+//call function to display the weather
 window.onload = function() {
   tokyoWeather();
 }
