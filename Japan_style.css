@@ -79,8 +79,8 @@ body  {
   left: 380px;
   text-align: center;
   
-  overflow-y: hidden; /* Hide vertical scroll */
-  overflow-x: hidden; /* Hide horizontal scroll */
+  /*overflow-y: hidden;  Hide vertical scroll */
+  /*overflow-x: hidden;  Hide horizontal scroll */
   padding-top: 0px;
   padding-left: 10;
   padding-right: 10;
@@ -152,7 +152,7 @@ body  {
   top: 0;
 }
 
-/* The dots/bullets/indicators */
+/* The dots to change slides */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -160,10 +160,11 @@ body  {
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
-  z-index: 1;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+
+
 
 .active, .dot:hover {
   background-color: #717171;
