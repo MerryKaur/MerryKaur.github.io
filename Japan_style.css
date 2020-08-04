@@ -81,7 +81,7 @@ body  {
   
   overflow-y: hidden; /* Hide vertical scroll */
   overflow-x: hidden; /* Hide horizontal scroll */
-  padding-top: 25px;
+  padding-top: 0px;
   padding-left: 10;
   padding-right: 10;
 }
