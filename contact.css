@@ -70,11 +70,11 @@ body  {
   
 /* The sidebar menu */
 .sidenavL {
-height: 80%; /* Full-height: remove this if you want "auto" height */
-width: 360px; /* Set the width of the sidebar */
+  height: 620px; 
+  width: 360px; /* Set the width of the sidebar */
 position: absolute; /* Fixed Sidebar (stay in place on scroll) */
-z-index: 4; /* Stay on top */
-top: 10; /* Stay at the top */
+z-index: 4; 
+top: 10; 
 right: 10;
 background-color: navajowhite; /* experimenting. lol */
 border: 3px solid darkgrey;
@@ -208,7 +208,7 @@ background-color: cadetblue;
 /* Style the container/contact section */
 .container {
 border-radius: 5px;
-padding: 10px;
+padding: 0px;
 }
 
 /* Create two columns that float next to eachother */
